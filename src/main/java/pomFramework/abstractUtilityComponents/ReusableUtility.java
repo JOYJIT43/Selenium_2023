@@ -1,8 +1,13 @@
 package pomFramework.abstractUtilityComponents;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +21,7 @@ public class ReusableUtility {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	public JavascriptExecutor js ;
 		 
 	public ReusableUtility(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -39,6 +45,11 @@ public class ReusableUtility {
 		 wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
 	}
 	
+	public void waitForElementToBeClickable(WebElement placeOrderBtn)
+	{
+		 WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(8));
+		 wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn));
+	}
 	
 	public void waitForURL(String Url)
 	{
@@ -55,4 +66,13 @@ public class ReusableUtility {
 	     return cartPage;
 	}
 
+	public String readGlobal(String key) throws IOException
+	{
+        String propFilePath= System.getProperty("user.dir")+"\\src\\main\\java\\pomFramework\\Resources\\GlobalData.properties";
+		
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(propFilePath);
+		prop.load(fis);
+		return prop.getProperty(key);
+	}
 }

@@ -1,5 +1,7 @@
   package pomFramework.pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,9 +41,9 @@ public class LandingPage extends ReusableUtility{
 		
 	}
 	
-	public void OpenApplication()
+	public void OpenApplication() throws IOException
 	{
-		driver.get("https://rahulshettyacademy.com/client");
+		driver.get(readGlobal("URL"));
 	}
 	
 }

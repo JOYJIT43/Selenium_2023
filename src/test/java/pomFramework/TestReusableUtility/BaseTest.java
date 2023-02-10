@@ -20,7 +20,7 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	public LandingPage landingPage;
-	public JavascriptExecutor js;
+	public JavascriptExecutor js ;
 	
 	public WebDriver initialization() throws IOException
 	{
@@ -52,7 +52,6 @@ public class BaseTest {
 		
 		driver.manage().window().maximize();	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
-		js = (JavascriptExecutor) driver;
 		return driver;
 		
 	}

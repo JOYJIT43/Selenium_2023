@@ -51,7 +51,7 @@ public class Pre_Framework {
 	
 		//Finding the Product which we want to choose
 		WebElement got=products.stream().filter(product -> 
-		product.findElement(By.cssSelector("div b")).getText().equalsIgnoreCase(choice)).findFirst().orElse(null);
+		product.findElement(By.cssSelector("div b h5")).getText().equalsIgnoreCase(choice)).findFirst().orElse(null);
 		
 		//Selecting and Adding in Cart
 		got.findElement(By.cssSelector("button i.fa-shopping-cart")).click();	
