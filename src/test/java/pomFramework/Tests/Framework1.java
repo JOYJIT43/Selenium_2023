@@ -2,6 +2,7 @@ package pomFramework.Tests;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -37,9 +38,9 @@ public class Framework1 extends BaseTest{
 	
 	
 	@DataProvider
-	public void readData()
+	public Object[][] readData() throws IOException
 	{
-		
+		List<HashMap<String,String>> data = dataReader(System.getProperty("user.dir")+"\\src\\test\\java\\pomFramework\\TestData\\PurchaseOrder.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
-
 }
