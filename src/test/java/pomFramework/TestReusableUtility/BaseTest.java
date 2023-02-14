@@ -38,7 +38,8 @@ public class BaseTest<ListhashMapData> {
 		FileInputStream fis = new FileInputStream(propFilePath);
 		prop.load(fis);
 		
-		String browserName=  prop.getProperty("browser");
+		//The first condition helps us to take input from the command line
+		String browserName=  System.getProperty("browser")!=null?System.getProperty("browser"):prop.getProperty("browser");
 		
 		switch(browserName)
 		{
@@ -90,7 +91,7 @@ public class BaseTest<ListhashMapData> {
 	    //read json to string
 		String jsonContent = 	FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
 		
-		//String to HashMap- Jackson Databind
+		//String to HashMap- Jackson Databind get maven dependencies
 		
 		ObjectMapper mapper = new ObjectMapper();
 		  List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {

@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,6 +32,9 @@ public class LandingPage extends ReusableUtility{
 	@FindBy(css=".login-btn")
 	WebElement logInBtn;
 	
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMessage;
+	
 	//method to Login
 	public HomePage LogIn(String email, String password)
 	{
@@ -44,6 +48,11 @@ public class LandingPage extends ReusableUtility{
 	public void OpenApplication() throws IOException
 	{
 		driver.get(readGlobal("URL"));
+	}
+
+	public Object getErrorMessage() {
+		waitForElementToAppear(errorMessage);
+		return errorMessage.getText();
 	}
 	
 }

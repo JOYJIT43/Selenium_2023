@@ -33,9 +33,16 @@ public class ReusableUtility {
 	@FindBy(css="button[routerlink*=cart]")
 	WebElement cartBtn;
 
+	
 	public void waitForElementToAppear(By locator) {
 	    WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(8));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+	}
+
+	public void waitForElementToAppear(WebElement ele) {
+	    WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(8));
+		wait.until(ExpectedConditions.visibilityOf(ele));
 
 	}
 	

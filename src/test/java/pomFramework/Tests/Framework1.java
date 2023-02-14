@@ -17,7 +17,8 @@ import pomFramework.pageObjects.HomePage;
 
 public class Framework1 extends BaseTest{
 	
-	
+	String successMsg = "THANKYOU FOR THE ORDER.";
+	 
 	@Test(dataProvider="readData")
 	public void submitOrder(HashMap <String,String> input) throws IOException, InterruptedException {
 		
@@ -33,7 +34,7 @@ public class Framework1 extends BaseTest{
 		CheckoutPage.selectCountry(input.get("country"));
 		ConfirmationPage confirmationPage= CheckoutPage.placeOrder();
 		
-		Assert.assertEquals(confirmationPage.getSuccessMsg(),"THANKYOU FOR THE ORDER.");
+		Assert.assertEquals(confirmationPage.getSuccessMsg(),successMsg);
 	}
 	
 	
