@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="34858" started-at="2023-02-14T14:17:30Z" finished-at="2023-02-14T14:18:04Z">
+  <suite name="Default suite" duration-ms="42025" started-at="2023-02-17T07:01:09Z" finished-at="2023-02-17T07:01:51Z">
     <groups>
     </groups>
-    <test name="First Test" duration-ms="22431" started-at="2023-02-14T14:17:30Z" finished-at="2023-02-14T14:17:52Z">
+    <test name="Default test" duration-ms="42025" started-at="2023-02-17T07:01:09Z" finished-at="2023-02-17T07:01:51Z">
       <class name="pomFramework.Tests.Framework1">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="launchApplication" is-config="true" duration-ms="10553" started-at="2023-02-14T19:47:30Z" finished-at="2023-02-14T19:47:40Z">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="launchApplication" is-config="true" duration-ms="28949" started-at="2023-02-17T12:31:09Z" finished-at="2023-02-17T12:31:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="submitOrder(java.util.HashMap)[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="submitOrder" duration-ms="3433" started-at="2023-02-14T19:47:40Z" data-provider="readData" finished-at="2023-02-14T19:47:44Z">
+        <test-method status="PASS" signature="submitOrder(java.util.HashMap)[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="submitOrder" duration-ms="3536" started-at="2023-02-17T12:31:38Z" data-provider="readData" finished-at="2023-02-17T12:31:42Z">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="tearDown" is-config="true" duration-ms="189" started-at="2023-02-14T19:47:44Z" finished-at="2023-02-14T19:47:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="tearDown" is-config="true" duration-ms="252" started-at="2023-02-17T12:31:42Z" finished-at="2023-02-17T12:31:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="launchApplication" is-config="true" duration-ms="4939" started-at="2023-02-14T19:47:44Z" finished-at="2023-02-14T19:47:49Z">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="launchApplication" is-config="true" duration-ms="5260" started-at="2023-02-17T12:31:42Z" finished-at="2023-02-17T12:31:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="submitOrder(java.util.HashMap)[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="submitOrder" duration-ms="2945" started-at="2023-02-14T19:47:49Z" data-provider="readData" finished-at="2023-02-14T19:47:52Z">
+        <test-method status="PASS" signature="submitOrder(java.util.HashMap)[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="submitOrder" duration-ms="3535" started-at="2023-02-17T12:31:47Z" data-provider="readData" finished-at="2023-02-17T12:31:51Z">
           <params>
             <param index="0">
               <value>
@@ -41,39 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.Framework1@13e39c73]" name="tearDown" is-config="true" duration-ms="121" started-at="2023-02-14T19:47:52Z" finished-at="2023-02-14T19:47:52Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.Framework1@3e9b1010]" name="tearDown" is-config="true" duration-ms="200" started-at="2023-02-17T12:31:51Z" finished-at="2023-02-17T12:31:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- pomFramework.Tests.Framework1 -->
-    </test> <!-- First Test -->
-    <test name="Second Test Test" duration-ms="12415" started-at="2023-02-14T14:17:52Z" finished-at="2023-02-14T14:18:04Z">
-      <class name="pomFramework.Tests.ErrorValidation">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="launchApplication" is-config="true" duration-ms="4598" started-at="2023-02-14T19:47:52Z" finished-at="2023-02-14T19:47:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="LoginErrorValidation()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="LoginErrorValidation" duration-ms="934" started-at="2023-02-14T19:47:57Z" finished-at="2023-02-14T19:47:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="tearDown" is-config="true" duration-ms="103" started-at="2023-02-14T19:47:57Z" finished-at="2023-02-14T19:47:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="launchApplication" is-config="true" duration-ms="4300" started-at="2023-02-14T19:47:58Z" finished-at="2023-02-14T19:48:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="ProductErrorValidation()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="ProductErrorValidation" duration-ms="2285" started-at="2023-02-14T19:48:02Z" finished-at="2023-02-14T19:48:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductErrorValidation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:pomFramework.Tests.ErrorValidation@15c43bd9]" name="tearDown" is-config="true" duration-ms="187" started-at="2023-02-14T19:48:04Z" finished-at="2023-02-14T19:48:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- pomFramework.Tests.ErrorValidation -->
-    </test> <!-- Second Test Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
